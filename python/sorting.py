@@ -15,6 +15,17 @@ def test_sort(sort_function, number_trials, list_size, domain_size):
     return "Test Passed!"
 
 
+### Insertion sort ### In-place sort. O(n^2)
+def insertion_sort(lst):
+    for i in range(1, len(lst)):
+        val = lst[i]
+        j = i
+        while (j > 0 and val < lst[j - 1]):
+            lst[j] = lst[j - 1]
+            j -= 1
+        lst[j] = val
+
+
 ### Heapsort ### Sorts list in-place. O(nlogn) worst-case.
 def max_heapify(lst, i, n):
 
