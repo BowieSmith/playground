@@ -6,7 +6,7 @@ def fibslow(n):
     if n == 1:
         return 1
     else:
-        return fib(n - 1) + fib(n - 2)
+        return fibslow(n - 1) + fibslow(n - 2)
 
 def fibfast(n):
     if n < 0:
@@ -18,3 +18,8 @@ def fibfast(n):
         return fibfast.memoized[n]
 fibfast.memoized = [0,1]
 
+def fib_no_recur(n):
+    a,b = 0,1
+    for _ in range(n):
+        a,b = b,a+b
+    print(a)

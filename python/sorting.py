@@ -1,8 +1,19 @@
 import math
 import random
 
-### Sort tester ###
 def test_sort(sort_function, number_trials, list_size, domain_size):
+    '''
+    Tests sort function over user defined trial, list, and domain size.
+
+    Args:
+        sort_function: function of format (f A) -> (Any). Destructively sorts list A. 
+        number_trials: number of randomized lists to sort.
+        list_size: size of each randomized list.
+        domain_size: upper bound on range of elements in randomized list.
+
+    Returns:
+        Any.
+    '''
     for n in range(0, number_trials):
         l = [random.randint(1, domain_size) for _ in range(0, list_size)]
         l_copy = l[:]
