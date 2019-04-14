@@ -1,5 +1,8 @@
 # python
 *.pyc
 
+# python venv directory
+tutorial-env/
+
 # vim
 *.swp
