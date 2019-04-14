@@ -55,3 +55,14 @@ def print_cut_rod_solution(p, n):
         print(s[n], end=' ')
         n = n - s[n]
     print()
+
+# returns length of longest increase subsequence in list s
+def longest_increasing_subsequence(s):
+    l = [-1] * len(s)
+    l[-1] = 0
+    for i in range(len(s) - 2, -1, -1):
+        reachable = map(lambda e: True if s[i] < e else False, s)
+        l_values = list(map(lambda pair: pair[1] if pair[0] else 0, zip(reachable, l)))
+        l[i] = 1 + max(l_values[i:])
+        print(l)
+    return max(l)
