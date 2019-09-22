@@ -1,0 +1,10 @@
+Smiley with heart eyes
+U+1F60D = 1 11110110 00001101
+U+1F60D = 000 011111 011000 001101
+          PPP P                     P = padding           
+
+byte1       byte2       byte3       byte4
+11110 000   10 011111   10 011000   10 001101
+\xf0        \x9f        \x98        \x8d
+
+
