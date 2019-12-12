@@ -9,3 +9,6 @@ tutorial-env/
 
 # vim
 *.swp
+
+#java
+*.class
